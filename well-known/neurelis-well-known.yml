@@ -1,0 +1,95 @@
+generated: '2026-08-26'
+method: probed
+source: live GET of /.well-known/* on every Neurelis-controlled host reachable from apis.yml
+note: >-
+  Every /.well-known/ path probed on every Neurelis host returned 404. Nothing was saved
+  and NO WellKnown or SecurityTxt pointer is emitted from this file — it records a verified
+  absence, not a presence. Each host answers a genuine 404 status (not a catch-all 200), so
+  these are real negatives rather than a soft-404 artifact; the soft_404_control probe below
+  documents that for each host. The only machine-readable documents Neurelis serves on any of
+  these hosts are /llms.txt (captured in llms/) and /sitemap.xml + /robots.txt.
+hit_count: 0
+hosts:
+- host: https://www.neurelis.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  soft_404_control:
+    path: /this-path-should-not-exist-xyz123
+    status: 404
+    bytes: 126715
+- host: https://www.valtoco.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  soft_404_control:
+    path: /nonexistent-xyz123
+    status: 404
+    bytes: 242832
+- host: https://www.myneurelis.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  soft_404_control:
+    path: /nonexistent-xyz123
+    status: 404
+    bytes: 32168
+- host: https://intravail.com
+  note: >-
+    Root returns 403 to non-browser clients (edge bot challenge); every probed path returned
+    a genuine 404 from the origin, so the absence is recorded rather than treated as blocked.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  soft_404_control:
+    path: /nonexistent-xyz123
+    status: 404
+    bytes: 679
