@@ -14,6 +14,9 @@ description: 'Neurelis, Inc. is a privately held San Diego neuroscience and spec
   agent-facing machine-readable surface is a set of llms.txt documents served on its
   corporate, product and patient-support properties.'
 url: https://raw.githubusercontent.com/api-evangelist/neurelis/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Neurelis publishes no developer program, no public API and no machine-readable API contract; its only agent-facing machine-readable surface is a set of llms.txt documents served on its corporate, prod"
 x-type: company
 x-source: harvest:secondary-market
 deliveryModel:
