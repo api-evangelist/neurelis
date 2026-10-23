@@ -9,6 +9,13 @@
       "method": "discovered"
     },
     {
+      "source": "https://www.neurelis.com/neurelis-news/blog/feed/",
+      "feed_url": "https://www.neurelis.com/neurelis-news/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://www.neurelis.com/about-neurelis/blog/feed/",
       "feed_url": "https://www.neurelis.com/about-neurelis/blog/feed/",
       "title": "",
@@ -23,6 +30,6 @@
       "method": "feed"
     }
   ],
-  "post_count": 11,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 12,
+  "fetched": "2026-10-17T14:53:57Z"
 }
